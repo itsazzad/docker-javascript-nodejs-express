@@ -141,6 +141,9 @@ Your image will now be listed by Docker:
 Running your image with `-d` runs the container in detached mode, leaving the container running in the background. The `-p` flag redirects a public port to a private port inside the container. Run the image you previously built:
 
     $ docker run -p 49160:8080 -d <your username>/node-web-app
+OR
+
+    $ docker run -v $(PWD):/usr/src/app -p 49160:8080 <your username>/node-web-app
 
 Print the output of your app:
 
